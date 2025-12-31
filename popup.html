@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emoji Picker</title>
+
+    <!-- Required for responsive popup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body class="light">
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search emojis..."
+          autocomplete="off"
+        />
+
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" title="Toggle dark mode">🌙</button>
+      </div>
+
+      <!-- Recently used -->
+      <div id="recent-container" class="hidden">
+        <small>Recently Used</small>
+        <div id="recent-grid" class="grid-mini"></div>
+        <hr />
+      </div>
+
+      <!-- Categories -->
+      <div class="categories" id="categories">
+        <button class="cat-btn active" data-category="Smileys">😀</button>
+        <button class="cat-btn" data-category="Animals">🐶</button>
+        <button class="cat-btn" data-category="Nature">🌿</button>
+        <button class="cat-btn" data-category="Food">🍎</button>
+        <button class="cat-btn" data-category="Objects">💡</button>
+        <button class="cat-btn" data-category="Symbols">🔣</button>
+        <button class="cat-btn" data-category="New">🆕</button>
+      </div>
+
+      <!-- Emoji grid -->
+      <div id="emoji-grid" class="grid"></div>
+
+      <!-- Status message -->
+      <div id="status" class="status-hidden">Copied to clipboard!</div>
+    </div>
+
+    <!-- Sound -->
+    <audio id="pop-sound" src="assets/pop.mp3" preload="auto"></audio>
+
+    <!-- Script -->
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

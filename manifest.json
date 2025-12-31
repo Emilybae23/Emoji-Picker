@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Emoji Picker",
+  "version": "1.1",
+  "description": "A modern emoji picker with search and recently used history.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["clipboardWrite", "storage"]
+}

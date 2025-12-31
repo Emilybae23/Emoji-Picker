@@ -1,0 +1,160 @@
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --input-bg: #f5f5f7;
+  --border: #e5e5ea;
+  --item-hover: #f2f2f7;
+  --primary: #007aff;
+}
+
+/* Dark theme */
+body.dark {
+  --bg: #1c1c1e;
+  --text: #ffffff;
+  --input-bg: #2c2c2e;
+  --border: #3a3a3c;
+  --item-hover: #3a3a3c;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 320px;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Search */
+#search {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  font-size: 13px;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#theme-toggle:hover {
+  background: var(--item-hover);
+}
+
+/* Recently used */
+#recent-container small {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.grid-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.cat-btn {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cat-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.cat-btn:hover {
+  background: var(--item-hover);
+}
+
+/* Emoji grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+/* Emoji item */
+.emoji-item {
+  font-size: 22px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.emoji-item:hover {
+  background: var(--item-hover);
+}
+
+/* Status toast */
+#status {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.status-show {
+  opacity: 1;
+}
+
+.status-hidden {
+  opacity: 0;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
